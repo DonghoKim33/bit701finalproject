@@ -4,7 +4,6 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    # ??? ??
     url: jdbc:mysql://db-h04k4-kr.vpc-pub-cdb.ntruss.com:3306/study?serverTimezone=Asia/Seoul
     username: study
     password: bit!@#123
@@ -13,8 +12,8 @@ spring:
       max-file-size:
         20MB
 
-#Mybatis
+# Mybatis
 mybatis:
   type-aliases-package: data.dto
   mapper-locations:
-    - /mapper/**/*.xml
+    - classpath:/mapper/**/*.xml
