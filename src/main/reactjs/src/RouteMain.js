@@ -2,7 +2,7 @@ import React from 'react';
 import {Home, Menu} from "./components";
 import {Route, Routes} from "react-router-dom";
 import {LoginForm, MemberForm, MemberList} from "./member";
-import {BoardForm, BoardList} from "./board";
+import {BoardDetailPage, BoardForm, BoardList} from "./board";
 import errorimg from '../src/image/404img.png';
 function RouteMain(props) {
     return (
@@ -21,6 +21,7 @@ function RouteMain(props) {
                     <Route path={'form'} element={<BoardForm/>}/>
                     <Route path={'list'} element={<BoardList/>}/>
                     <Route path={'list/:currentPage'} element={<BoardList/>}/>
+                    <Route path={'detail/:num/:currentPage'} element={<BoardDetailPage/>}/>
                 </Route>
 
                 <Route path={'*'} element={
